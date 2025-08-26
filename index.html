@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wishing the Most Beautiful Soul a Very Happy Birthday 🎂🌸</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+        .stars, .shooting-stars {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0; left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .moon {
+            position: absolute;
+            top: 40px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 30px 30px, #fffde4 70%, #f7e9b0 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 40px 15px #fffde4;
+            z-index: 1;
+        }
+        .cloud {
+            position: absolute;
+            top: 70px;
+            left: 100px;
+            width: 80px;
+            height: 40px;
+            background: #fff;
+            border-radius: 40px;
+            opacity: 0.15;
+            filter: blur(2px);
+            z-index: 1;
+            animation: cloudMove 18s linear infinite;
+        }
+        .cloud2 {
+            left: 200px;
+            top: 120px;
+            width: 120px;
+            height: 60px;
+            animation-delay: 6s;
+        }
+        @keyframes cloudMove {
+            0% { left: -100px; }
+            100% { left: 120vw; }
+        }
+        .ground {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 80px;
+            background: linear-gradient(0deg, #232d3a 80%, transparent 100%);
+            z-index: 1;
+        }
+        .tree, .tree2 {
+            position: absolute;
+            bottom: 50px;
+            width: 40px;
+            height: 80px;
+            z-index: 2;
+        }
+        .tree { left: 30px; }
+        .tree2 { right: 30px; left: auto; }
+        .tree .trunk, .tree2 .trunk {
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            width: 8px;
+            height: 30px;
+            background: #8d6748;
+            border-radius: 4px;
+        }
+        .tree .leaves, .tree2 .leaves {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle at 20px 20px, #2e8b57 70%, #14532d 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 15px #14532d;
+        }
+        .lantern {
+            position: absolute;
+            bottom: 80px;
+            left: 50vw;
+            width: 25px;
+            height: 50px;
+            margin-left: -12.5px;
+            z-index: 3;
+            animation: lanternSwing 2s infinite alternate ease-in-out;
+        }
+        .lantern-body {
+            width: 25px;
+            height: 35px;
+            background: linear-gradient(180deg, #ffe082 60%, #ffb6b9 100%);
+            border-radius: 12px 12px 8px 8px;
+            box-shadow: 0 0 15px 6px #ffe082;
+            position: absolute;
+            top: 8px;
+            left: 0;
+        }
+        .lantern-string {
+            width: 3px;
+            height: 8px;
+            background: #fffde4;
+            position: absolute;
+            top: 0;
+            left: 11px;
+            border-radius: 2px;
+        }
+        @keyframes lanternSwing {
+            0% { transform: rotate(-8deg); }
+            100% { transform: rotate(8deg); }
+        }
+        .container {
+            text-align: center;
+            position: relative;
+            top: 12vh;
+            z-index: 2;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.2em;
+            color: #ffe082;
+            margin-bottom: 0.2em;
+            text-shadow: 0 0 15px #ffe082, 0 0 30px #fff;
+            animation: pop 1s ease;
+            position: relative;
+            z-index: 6;
+            margin-top: 80px;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .message {
+            font-size: 1.1em;
+            color: #fffde4;
+            margin-bottom: 1.5em;
+            text-shadow: 0 0 8px #ffe082;
+            animation: fadeIn 2s ease;
+            line-height: 1.5;
+            max-width: 600px;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .cake {
+            margin: 0 auto;
+            width: 160px;
+            height: 160px;
+            position: relative;
+            animation: bounce 2s infinite alternate;
+            z-index: 2;
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+        .cake-base {
+            width: 140px;
+            height: 60px;
+            background: #fff0c1;
+            border-radius: 0 0 70px 70px;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        .cake-top {
+            width: 130px;
+            height: 45px;
+            background: #ffb6b9;
+            border-radius: 65px 65px 45px 45px;
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            z-index: 2;
+            box-shadow: 0 0 15px #ffb6b9;
+        }
+        .candle {
+            width: 8px;
+            height: 30px;
+            background: #ffe082;
+            position: absolute;
+            top: 0;
+            left: 76px;
+            border-radius: 4px;
+            z-index: 3;
+            box-shadow: 0 0 8px #fff59d;
+        }
+        .flame {
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle at 6px 6px, #ffeb3b 60%, #ff9800 100%);
+            border-radius: 50%;
+            position: absolute;
+            top: -10px;
+            left: 74px;
+            z-index: 4;
+            animation: flameFlicker 0.8s infinite alternate;
+            box-shadow: 0 0 20px 8px #ffeb3b;
+        }
+        @keyframes flameFlicker {
+            0% { transform: scaleY(1); opacity: 1; }
+            100% { transform: scaleY(1.2); opacity: 0.8; }
+        }
+        .confetti {
+            position: absolute;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .firefly {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle at 3px 3px, #ffe082 80%, #fffde4 100%);
+            border-radius: 50%;
+            opacity: 0.7;
+            box-shadow: 0 0 12px 4px #ffe082;
+            animation: fireflyMove 8s linear infinite;
+        }
+        @keyframes fireflyMove {
+            0% { transform: translateY(0) translateX(0); opacity: 0.7;}
+            20% { opacity: 1;}
+            50% { transform: translateY(-30px) translateX(40px); opacity: 0.9;}
+            80% { opacity: 1;}
+            100% { transform: translateY(0) translateX(0); opacity: 0.7;}
+        }
+        /* Profile Pic Styles */
+        .profile-pic-wrap {
+            position: relative;
+            z-index: 7;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px 8px #ffe082, 0 0 0 6px #fffde4 inset;
+            background: rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: profilePop 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+            margin: 0 auto 20px;
+        }
+        @keyframes profilePop {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffe082;
+            box-shadow: 0 0 18px 4px #ffe082;
+            background: #fffde4;
+        }
+        .profile-pic-wrap::after {
+            content: '';
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px; height: 140px;
+            border-radius: 50%;
+            box-shadow: 0 0 40px 15px #ffe082;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        /* Glow effect for h1 */
+        h1::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%; top: 100%;
+            transform: translate(-50%, 0);
+            width: 160px; height: 14px;
+            background: radial-gradient(ellipse at center, #ffe08288 0%, transparent 80%);
+            z-index: -1;
+        }
+        /* Extra animated border for profile pic */
+        .profile-pic-wrap .animated-border {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 130px; height: 130px;
+            border-radius: 50%;
+            border: 2px dashed #ffb6b9;
+            animation: rotateBorder 6s linear infinite;
+            pointer-events: none;
+            z-index: 8;
+        }
+        @keyframes rotateBorder {
+            0% { transform: translate(-50%, -50%) rotate(0deg);}
+            100% { transform: translate(-50%, -50%) rotate(360deg);}
+        }
+        
+        /* Music Player Styles */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 15px rgba(255, 224, 130, 0.5);
+            border: 1px solid rgba(255, 224, 130, 0.3);
+        }
+        .music-player button {
+            background: transparent;
+            border: none;
+            color: #ffe082;
+            cursor: pointer;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            transition: all 0.3s ease;
+        }
+        .music-player button:hover {
+            background: rgba(255, 224, 130, 0.2);
+            transform: scale(1.1);
+        }
+        .music-title {
+            color: #fffde4;
+            font-size: 0.9em;
+            max-width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        /* Floating Hearts */
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9;
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            opacity: 0.7;
+            animation: floatHeart 15s linear infinite;
+        }
+        .heart:before, .heart:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #ffb6b9;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -50%;
+            left: 0;
+        }
+        .heart:after {
+            top: 0;
+            left: 50%;
+        }
+        @keyframes floatHeart {
+            0% {
+                transform: translate(0, 100vh) rotate(0deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translate(var(--heart-translate-x, 100px), -100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Media Queries for Responsiveness */
+        @media (min-width: 768px) {
+            .moon {
+                top: 60px;
+                right: 120px;
+                width: 120px;
+                height: 120px;
+            }
+            .cloud {
+                top: 100px;
+                left: 180px;
+                width: 120px;
+                height: 60px;
+            }
+            .cloud2 {
+                left: 400px;
+                top: 160px;
+                width: 180px;
+                height: 80px;
+            }
+            .ground {
+                height: 120px;
+            }
+            .tree, .tree2 {
+                bottom: 80px;
+                width: 60px;
+                height: 120px;
+            }
+            .tree { left: 60px; }
+            .tree2 { right: 60px; left: auto; }
+            .tree .trunk, .tree2 .trunk {
+                left: 25px;
+                width: 10px;
+                height: 40px;
+            }
+            .tree .leaves, .tree2 .leaves {
+                bottom: 30px;
+                width: 60px;
+                height: 60px;
+            }
+            .lantern {
+                bottom: 120px;
+                width: 30px;
+                height: 60px;
+                margin-left: -15px;
+            }
+            .lantern-body {
+                width: 30px;
+                height: 40px;
+                top: 10px;
+            }
+            .lantern-string {
+                width: 4px;
+                height: 10px;
+                left: 13px;
+            }
+            .container {
+                top: 10vh;
+            }
+            h1 {
+                font-size: 3em;
+                margin-top: 100px;
+            }
+            .message {
+                font-size: 1.5em;
+            }
+            .cake {
+                width: 220px;
+                height: 220px;
+            }
+            .cake-base {
+                width: 200px;
+                height: 80px;
+                left: 10px;
+            }
+            .cake-top {
+                width: 180px;
+                height: 60px;
+                top: 30px;
+                left: 20px;
+            }
+            .candle {
+                width: 10px;
+                height: 40px;
+                left: 105px;
+            }
+            .flame {
+                width: 16px;
+                height: 16px;
+                top: -12px;
+                left: 102px;
+            }
+            .profile-pic-wrap {
+                width: 160px;
+                height: 160px;
+            }
+            .profile-pic {
+                width: 140px;
+                height: 140px;
+            }
+            .profile-pic-wrap::after {
+                width: 180px;
+                height: 180px;
+            }
+            h1::after {
+                width: 220px;
+                height: 18px;
+            }
+            .profile-pic-wrap .animated-border {
+                width: 170px;
+                height: 170px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+                margin-top: 70px;
+            }
+            .message {
+                font-size: 0.95em;
+            }
+            .profile-pic-wrap {
+                width: 160px;
+                height: 160px;
+            }
+            .profile-pic {
+                width: 140px;
+                height: 140px;
+            }
+            .profile-pic-wrap::after {
+                width: 180px;
+                height: 180px;
+            }
+            .profile-pic-wrap .animated-border {
+                width: 170px;
+                height: 170px;
+            }
+            .cake {
+                width: 140px;
+                height: 140px;
+            }
+            .cake-base {
+                width: 120px;
+                height: 50px;
+                left: 10px;
+                border-radius: 0 0 60px 60px;
+            }
+            .cake-top {
+                width: 110px;
+                height: 40px;
+                top: 20px;
+                left: 15px;
+                border-radius: 55px 55px 35px 35px;
+            }
+            .candle {
+                left: 66px;
+            }
+            .flame {
+                left: 64px;
+            }
+            .music-player {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 12px;
+            }
+            .music-title {
+                max-width: 120px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas class="stars"></canvas>
+    <canvas class="shooting-stars"></canvas>
+    <div class="moon"></div>
+    <div class="cloud"></div>
+    <div class="cloud cloud2"></div>
+    <div class="ground"></div>
+    <div class="tree">
+        <div class="trunk"></div>
+        <div class="leaves"></div>
+    </div>
+    <div class="tree2">
+        <div class="trunk"></div>
+        <div class="leaves"></div>
+    </div>
+    <div class="lantern">
+        <div class="lantern-string"></div>
+        <div class="lantern-body"></div>
+    </div>
+    <canvas class="confetti"></canvas>
+    
+    <!-- Floating Hearts Container -->
+    <div class="hearts"></div>
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <div class="music-title">Happy Birthday Song</div>
+        <button id="playPauseBtn">▶️</button>
+        <audio id="bgMusic" loop>
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Profile Pic above Happy Birthday -->
+        <div class="profile-pic-wrap">
+            <span class="animated-border"></span>
+            <img class="profile-pic" src="2.jpg" alt="Profile Pic">
+        </div>
+        
+        <h1>Happy Birthday!</h1>
+        <div class="message">
+     Happy Birthday 🎉✨ Wishing you lots of happiness, good health and success in your life. May your smile always stay as beautiful as it is. 🌸<br>
+            <span style="color:#81c784;font-size:0.9em;">Enjoy your wonderful day filled with beautiful moments ✨</span>
+        </div>
+        <div class="cake">
+            <div class="cake-base"></div>
+            <div class="cake-top"></div>
+            <div class="candle"></div>
+            <div class="flame"></div>
+        </div>
+    </div>
+    
+    <div class="firefly" style="bottom:100px; left:20vw; animation-delay:0s;"></div>
+    <div class="firefly" style="bottom:120px; left:30vw; animation-delay:2s;"></div>
+    <div class="firefly" style="bottom:90px; left:70vw; animation-delay:4s;"></div>
+    <div class="firefly" style="bottom:80px; left:80vw; animation-delay:1s;"></div>
+    
+    <script>
+        // Night Sky Stars Animation
+        const starsCanvas = document.querySelector('.stars');
+        const starsCtx = starsCanvas.getContext('2d');
+        let SW = window.innerWidth;
+        let SH = window.innerHeight;
+        starsCanvas.width = SW;
+        starsCanvas.height = SH;
+
+        const stars = [];
+        for (let i = 0; i < 180; i++) {
+            stars.push({
+                x: Math.random() * SW,
+                y: Math.random() * SH * 0.7,
+                r: Math.random() * 1.5 + 0.5,
+                alpha: Math.random() * 0.5 + 0.5,
+                twinkle: Math.random() * 0.05 + 0.01
+            });
+        }
+        function drawStars() {
+            starsCtx.clearRect(0, 0, SW, SH);
+            stars.forEach(s => {
+                starsCtx.save();
+                starsCtx.globalAlpha = s.alpha;
+                starsCtx.beginPath();
+                starsCtx.arc(s.x, s.y, s.r, 0, 2 * Math.PI);
+                starsCtx.fillStyle = "#fff";
+                starsCtx.shadowColor = "#fff";
+                starsCtx.shadowBlur = 8;
+                starsCtx.fill();
+                starsCtx.restore();
+                s.alpha += s.twinkle * (Math.random() > 0.5 ? 1 : -1);
+                if (s.alpha > 1) s.alpha = 1;
+                if (s.alpha < 0.3) s.alpha = 0.3;
+            });
+            requestAnimationFrame(drawStars);
+        }
+        drawStars();
+
+        window.addEventListener('resize', () => {
+            SW = window.innerWidth;
+            SH = window.innerHeight;
+            starsCanvas.width = SW;
+            starsCanvas.height = SH;
+        });
+
+        // Shooting Stars Animation
+        const shootingCanvas = document.querySelector('.shooting-stars');
+        const shootingCtx = shootingCanvas.getContext('2d');
+        shootingCanvas.width = SW;
+        shootingCanvas.height = SH;
+
+        let shootingStars = [];
+        function spawnShootingStar() {
+            shootingStars.push({
+                x: Math.random() * SW * 0.8 + SW * 0.1,
+                y: Math.random() * SH * 0.3 + SH * 0.1,
+                len: Math.random() * 80 + 60,
+                speed: Math.random() * 6 + 4,
+                alpha: 1,
+                angle: Math.PI / 4 + Math.random() * Math.PI / 8
+            });
+        }
+        setInterval(spawnShootingStar, 1800);
+
+        function drawShootingStars() {
+            shootingCtx.clearRect(0, 0, SW, SH);
+            shootingStars.forEach((star, idx) => {
+                shootingCtx.save();
+                shootingCtx.globalAlpha = star.alpha;
+                shootingCtx.strokeStyle = "#fffde4";
+                shootingCtx.shadowColor = "#fffde4";
+                shootingCtx.shadowBlur = 16;
+                shootingCtx.beginPath();
+                shootingCtx.moveTo(star.x, star.y);
+                shootingCtx.lineTo(star.x - Math.cos(star.angle) * star.len, star.y - Math.sin(star.angle) * star.len);
+                shootingCtx.lineWidth = 2;
+                shootingCtx.stroke();
+                shootingCtx.restore();
+
+                star.x += Math.cos(star.angle) * star.speed;
+                star.y += Math.sin(star.angle) * star.speed;
+                star.alpha -= 0.02;
+            });
+            shootingStars = shootingStars.filter(star => star.alpha > 0);
+            requestAnimationFrame(drawShootingStars);
+        }
+        drawShootingStars();
+
+        window.addEventListener('resize', () => {
+            shootingCanvas.width = window.innerWidth;
+            shootingCanvas.height = window.innerHeight;
+        });
+
+        // Confetti Animation
+        const canvas = document.querySelector('.confetti');
+        const ctx = canvas.getContext('2d');
+        let W = window.innerWidth;
+        let H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+
+        const confettiColors = ['#ffe082', '#ffb6b9', '#6ec6ff', '#81c784', '#f06292', '#fffde4'];
+        const confettiPieces = [];
+
+        for (let i = 0; i < 120; i++) {
+            confettiPieces.push({
+                x: Math.random() * W,
+                y: Math.random() * H - H,
+                r: Math.random() * 8 + 4,
+                d: Math.random() * 80 + 20,
+                color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+                tilt: Math.random() * 10 - 5,
+                tiltAngle: 0,
+                tiltAngleIncremental: Math.random() * 0.07 + 0.05
+            });
+        }
+
+        function drawConfetti() {
+            ctx.clearRect(0, 0, W, H);
+            confettiPieces.forEach((p, i) => {
+                ctx.beginPath();
+                ctx.lineWidth = p.r;
+                ctx.strokeStyle = p.color;
+                ctx.moveTo(p.x + p.tilt + p.r / 3, p.y);
+                ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.d / 3);
+                ctx.stroke();
+            });
+            updateConfetti();
+        }
+
+        function updateConfetti() {
+            confettiPieces.forEach((p, i) => {
+                p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
+                p.x += Math.sin(0.01 * p.d);
+                p.tiltAngle += p.tiltAngleIncremental;
+                p.tilt = Math.sin(p.tiltAngle - (i % 3)) * 15;
+
+                if (p.y > H) {
+                    p.x = Math.random() * W;
+                    p.y = -10;
+                }
+            });
+        }
+
+        function animateConfetti() {
+            drawConfetti();
+            requestAnimationFrame(animateConfetti);
+        }
+
+        animateConfetti();
+
+        window.addEventListener('resize', () => {
+            W = window.innerWidth;
+            H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+        });
+
+        // Music Player Functionality
+        const audio = document.getElementById('bgMusic');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        let isPlaying = false;
+
+        // Try to autoplay with user gesture
+        document.addEventListener('click', function() {
+            if (!isPlaying) {
+                audio.play().then(() => {
+                    isPlaying = true;
+                    playPauseBtn.textContent = '⏸️';
+                }).catch(error => {
+                    console.log('Autoplay prevented:', error);
+                });
+            }
+        }, { once: true });
+
+        playPauseBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                audio.pause();
+                playPauseBtn.textContent = '▶️';
+            } else {
+                audio.play();
+                playPauseBtn.textContent = '⏸️';
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Floating Hearts Animation
+        const heartsContainer = document.querySelector('.hearts');
+        
+        function createHearts() {
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.setProperty('--heart-translate-x', Math.random() * 200 - 100 + 'px');
+                heart.style.animationDelay = Math.random() * 15 + 's';
+                heartsContainer.appendChild(heart);
+            }
+        }
+        
+        createHearts();
+    </script>
+</body>
+</html>
